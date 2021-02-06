@@ -1,64 +1,44 @@
 <?php
 class Easy_Slider_Flexslider{
 
-    public static function basicSlider($slug,$slider){
-        $content = '<div class="'.$slug.'"><ul class="slides">';
+    public static function basicSlider($slug, $items, $params){
 
-        foreach($slider as $item){
+        $content = '<div class="'.$slug.' flexslider carousel"><ul class="slides">';
+
+        foreach($items as $item){
             if( $image = wp_get_attachment_image_src( $item->post_id, 'full' ) ) {
                 $content .= '<li><img src="' . $image[0] . '" /></li>';
             }
         }
         $content .= '</ul></div>';
 
-        ob_start();
-        ?>
+        $content .= "
         <script>
             jQuery( window ).load(function() {
-                jQuery('.<?=$slug?>').flexslider({
-                    animation: "slide"
+                jQuery('." . $slug . "').flexslider({
+                    animation: 'slide',
+                    smoothHeight: true,
+                    animationLoop: true,
+                    animationSpeed: " . ( $params->animationSpeed ? $params->animationSpeed : 600 ) . ",
+                    slideshowSpeed: " . ( $params->animationSpeed ? $params->slideshowSpeed : 7000) . ",
+                    slideshow: " . ($params->slideshow?'true':'false') . ",
+                    randomize: " . ($params->randomize?'true':'false') . ",
+                    controlNav: " . ($params->controlNav?'true':'false') . ",
+                    directionNav: " . ($params->directionNav?'true':'false') . ",
+                    maxItems: $params->maxItems,
+                    itemWidth: " . ( $params->itemWidth ? $params->itemWidth : 150 ) . ",
                 });
             });
-        </script>
-        <?php
-        $content .= ob_get_contents();
-        ob_end_flush();
+        </script>";
 
         return $content;
     }
 
-    public static function sliderWithThumbail($slug,$slider){
-        $content = '<div class="'.$slug.'"><ul class="slides">';
+    public static function sliderWithThumbnail($slug, $items, $params){
 
-        foreach($slider as $item){
-            if( $image = wp_get_attachment_image_src( $item->post_id, 'full' ) ) {
-                $min = wp_get_attachment_image_src($item->post_id,'medium');
-                $content .= '<li data-thumb="' . $min[0] . '" ><img src="' . $image[0] . '" /></li>';
-            }
-        }
-        $content .= '</ul></div>';
-
-        ob_start();
-        ?>
-        <script>
-            jQuery( window ).load(function() {
-                jQuery('.<?=$slug?>').flexslider({
-                    animation: "slide",
-                    controlNav: "thumbnails"
-                });
-            });
-        </script>
-        <?php
-        $content .= ob_get_contents();
-        ob_end_flush();
-
-        return $content;
-    }
-
-    public static function sliderWithThumbailV2($slug,$slider){
         $content = '<div id="slider-'.$slug.'" class="flexslider"><ul class="slides">';
 
-        foreach($slider as $item){
+        foreach($items as $item){
             if( $image = wp_get_attachment_image_src( $item->post_id, 'full' ) ) {
                 $content .= '<li><img src="' . $image[0] . '" /></li>';
             }
@@ -66,40 +46,44 @@ class Easy_Slider_Flexslider{
         $content .= '</ul></div>';
 
         $content .= '<div id="carousel-'.$slug.'" class="flexslider"><ul class="slides">';
-        foreach($slider as $item){
+        foreach($items as $item){
             if( $image = wp_get_attachment_image_src( $item->post_id, 'thumbnail' ) ) {
                 $content .= '<li><img src="' . $image[0] . '" /></li>';
             }
         }
         $content .= '</ul></div>';
 
-        ob_start();
-        ?>
+        $content .= "
         <script>
             jQuery( window ).load(function() {
-                jQuery('#carousel-<?=$slug?>').flexslider({
-                    animation: "slide",
-                    controlNav: false,
+                jQuery('#carousel-".$slug."').flexslider({
+                    animation: 'slide',
                     animationLoop: true,
+                    controlNav: false,
                     slideshow: false,
                     itemWidth: 150,
                     itemMargin: 0,
-                    asNavFor: '#slider-<?=$slug?>'
+                    maxItems: $params->maxItemsThumbnail,
+                    directionNav : " . ($params->directionNav?'true':'false') . ",
+                    asNavFor: '#slider-" . $slug . "'
                 });
 
-                jQuery('#slider-<?=$slug?>').flexslider({
-                    animation: "slide",
-                    controlNav: false,
+                jQuery('#slider-".$slug."').flexslider({
+                    animation: 'slide',
                     animationLoop: true,
-                    slideshow: true,
-                    smoothHeight:true,
-                    sync: '#carousel-<?=$slug?>'
+                    controlNav: false,
+                    smoothHeight: true,
+                    animationSpeed: " . ($params->animationSpeed?$params->animationSpeed:600) . ",
+                    slideshowSpeed: " . ($params->slideshowSpeed?$params->slideshowSpeed:7000) . ",
+                    slideshow: " . ($params->slideshow?'true':'false') . ",
+                    randomize: " . ($params->randomize?'true':'false') . ",
+                    directionNav: " . ($params->directionNav?'true':'false') . ",
+                    
+                    sync: '#carousel-".$slug."'
                 });
             });
-        </script>
-        <?php
-        $content .= ob_get_contents();
-        ob_end_flush();
+        </script>";
+
 
         return $content;
     }

@@ -132,7 +132,9 @@ class Easy_Slider_Admin{
         add_menu_page(	__( 'Easy Slider', $this->plugin_text_domain ), //page title
             __( 'Easy Slider', $this->plugin_text_domain ), //menu title
             'manage_options', //capability
-            $this->plugin_name //menu_slug
+            $this->plugin_name, //menu_slug
+            '',
+        'dashicons-format-gallery'
         );
 
         // Add a submenu page and save the returned hook suffix.
@@ -188,10 +190,12 @@ class Easy_Slider_Admin{
         $this->new      = true;
         $this->index    = 0;
         $this->response = '';
+        $this->params   = array();
 
         if(!empty($_GET['slider'])){
             $this->slider = Easy_Slider_Functions::getOneSlider($_GET['slider'],'id_slider');
             if($this->slider !== NULL){
+                $this->params   = json_decode($this->slider->params);
                 $this->items    = Easy_Slider_Functions::getItemsSlider($this->slider->id_slider);
                 $this->index    = count($this->items);
                 $this->new      = false;
@@ -239,10 +243,32 @@ class Easy_Slider_Admin{
         if (isset($_POST['slider_nonce']) && wp_verify_nonce($_POST['slider_nonce'], 'slider_nonce')) {
 
             global $wpdb;
+            $new = true;
+            $params = array();
 
-            $title  = sanitize_text_field( $_POST[$this->plugin_name]['title'] );
-            $slides = $_POST[$this->plugin_name]['slides'];
-            $new    = true;
+            // POST
+            $title                          = sanitize_text_field( $_POST[$this->plugin_name]['title'] );
+            $slides                         = $_POST[$this->plugin_name]['slides'];
+            $params['slideshowSpeed']       = ( empty( $_POST[$this->plugin_name]['slideshowSpeed'] ) ? '' : absint( $_POST[$this->plugin_name]['slideshowSpeed'] ) );
+            $params['animationSpeed']       = ( empty( $_POST[$this->plugin_name]['animationSpeed'] ) ? '' : absint( $_POST[$this->plugin_name]['animationSpeed'] ) );
+            $params['directionNav']         = ( isset( $_POST[$this->plugin_name]['directionNav'] ) ? 1 : 0 );
+            $params['slideshow']            = ( isset( $_POST[$this->plugin_name]['slideshow'] ) ? 1 : 0 );
+            $params['randomize']            = ( isset( $_POST[$this->plugin_name]['randomize'] ) ? 1 : 0 );
+            $params['controlNavThumbnail']  = ( isset( $_POST[$this->plugin_name]['controlNavThumbnail'] ) ? 1 : 0 );
+
+            if($params['controlNavThumbnail']){
+
+                $params['controlNav']           = 0;
+                $params['maxItems']             = 1;
+                $params['itemWidth']            = '';
+                $params['maxItemsThumbnail']    = absint( ( $_POST[$this->plugin_name]['maxItemsThumbnail'] <= 10 ? $_POST[$this->plugin_name]['maxItemsThumbnail'] : 10 ) );
+
+            }else{
+                $params['controlNav']           = ( isset( $_POST[$this->plugin_name]['controlNav'] ) ? 1 : 0 );
+                $params['maxItems']             = absint( ( $_POST[$this->plugin_name]['maxItems'] <= 10 ? $_POST[$this->plugin_name]['maxItems'] : 10 ) );
+                $params['itemWidth']            = ( empty( $_POST[$this->plugin_name]['itemWidth'] ) ? '' : absint( $_POST[$this->plugin_name]['itemWidth'] ) );
+                $params['maxItemsThumbnail']    = 1;
+            }
 
             // Update
             if(!empty($_POST['slider_id']) && Easy_Slider_Functions::getOneSlider($_POST['slider_id'],'id_slider') != NULL){
@@ -252,7 +278,7 @@ class Easy_Slider_Admin{
                 $data = array(
                     'title'         => $title,
                     'slug'          => $slug,
-                    'status'        => 1,
+                    'params'        => json_encode($params),
                     'updated_at'    => date('Y-m-d H:i:s')
                 );
 
@@ -273,7 +299,7 @@ class Easy_Slider_Admin{
                 $data = array(
                     'title'         => $title,
                     'slug'          => $slug,
-                    'status'        => 1,
+                    'params'        => json_encode($params),
                     'created_at'    => date('Y-m-d H:i:s'),
                     'updated_at'    => NULL
                 );
@@ -285,6 +311,7 @@ class Easy_Slider_Admin{
             }
 
             // Slider Item
+            $i = 1;
             foreach ($slides as $key => $item) {
                 if(!empty($item)) {
                     $data = array(
@@ -294,6 +321,11 @@ class Easy_Slider_Admin{
                         'created_at'    => date('Y-m-d H:i:s'),
                     );
                     $wpdb->insert($wpdb->prefix . 'es_sliders_items', $data);
+
+                    if($i == 10) { // Limit à 10 slides
+                        break;
+                    }
+                    $i++;
                 }
             }
 

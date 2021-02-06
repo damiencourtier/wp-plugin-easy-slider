@@ -107,14 +107,26 @@ class Easy_Slider_Public {
      */
     public function shortcode_content($atts){
 
-        $atts = shortcode_atts(array(
-            'name' => null,
-        ), $atts);
+        $atts = shortcode_atts(array('name' => null), $atts);
 
-        $slider = Easy_Slider_Functions::getItemsSliderBySlug($atts['name']);
+        if($atts['name'] == null){
+            return '';
+        }
 
-        //$content = Easy_Slider_Flexslider::basicSlider($atts['name'],$slider);
-        $content = Easy_Slider_Flexslider::sliderWithThumbailV2($atts['name'],$slider);
-        return $content;
+        $slider = Easy_Slider_Functions::getOneSlider($atts['name'],'slug');
+
+        if(!$slider){
+            return '';
+        }
+
+        $params = json_decode($slider->params);
+        $slides = Easy_Slider_Functions::getItemsSliderBySlug($atts['name']);
+
+        if($params->controlNavThumbnail == 1){
+            return Easy_Slider_Flexslider::sliderWithThumbnail($atts['name'], $slides, $params);
+        }else{
+            return Easy_Slider_Flexslider::basicSlider($atts['name'], $slides, $params);
+        }
+
     }
 }
