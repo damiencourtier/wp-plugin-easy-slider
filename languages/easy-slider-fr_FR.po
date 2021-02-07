@@ -1,0 +1,208 @@
+# Copyright (C) 2021 Damien Courtier
+# This file is distributed under the same license as the Easy Slider plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Slider 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/easy-slider\n"
+"Last-Translator: \n"
+"Language-Team: Français\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-02-07T22:02:21+01:00\n"
+"PO-Revision-Date: 2021-02-07 22:00+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: easy-slider\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Loco-Version: 2.5.0; wp-5.6.1"
+
+#: admin/partials/slider-form-view.php:138
+msgid "Activatable options:"
+msgstr "Options activables :"
+
+#: admin/partials/slider-form-view.php:44
+msgid "Add a picture"
+msgstr "Ajouter une image"
+
+#: admin/partials/sliders-list-view.php:36
+msgid "Add a Slider"
+msgstr "Ajouter un Slider"
+
+#: admin/partials/slider-form-view.php:156
+msgid "Adds navigation for pagination control of each slide with thumbnail"
+msgstr ""
+"Ajoute la navigation pour le contrôle de la pagination de chaque slide avec "
+"vignette"
+
+#: admin/partials/slider-form-view.php:100
+msgid "Animation speed:"
+msgstr "Vitesse d'animation"
+
+#: admin/partials/slider-form-view.php:216
+msgid "Cancel"
+msgstr "Annuler"
+
+#: admin/partials/slider-form-view.php:60
+#: admin/partials/slider-form-view.php:229
+msgid "Choose a picture"
+msgstr "Choisir une image"
+
+#: admin/partials/sliders-list-view.php:22
+msgid "copied shortcode !"
+msgstr "Shotcode copié !"
+
+#: admin/partials/sliders-list-view.php:63
+msgid "Copy"
+msgstr "Copier"
+
+#: admin/partials/slider-form-view.php:143
+msgid "Create navigation for paging control of each slide"
+msgstr "Créer une navigation pour le contrôle de pagination de chaque slide"
+
+#: admin/partials/slider-form-view.php:183
+msgid "Create previous/next arrow navigation"
+msgstr "Créer une flèche de navigation précédente / suivante"
+
+#. Author of the plugin
+msgid "Damien Courtier"
+msgstr "Damien Courtier"
+
+#: admin/partials/slider-form-view.php:72
+#: admin/partials/slider-form-view.php:237
+#: admin/partials/sliders-list-view.php:68
+msgid "Delete"
+msgstr "Supprimer"
+
+#. Plugin Name of the plugin
+msgid "Easy Slider"
+msgstr "Easy Slider"
+
+#: admin/partials/sliders-list-view.php:67
+msgid "Edit"
+msgstr "Editer"
+
+#. Author URI of the plugin
+msgid "http://example.com/"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "http://example.com/plugin-name-uri/"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:126
+msgid "Image width:"
+msgstr "Taille de l'image"
+
+#: admin/partials/slider-form-view.php:120
+msgid "Maximum number of pictures that should be visible"
+msgstr "Nombre maximum d'images devant être visibles"
+
+#: admin/partials/slider-form-view.php:142
+msgid "Navigation"
+msgstr "Navigation"
+
+#: admin/partials/slider-form-view.php:182
+msgid "Navigation arrow"
+msgstr "Flèche de navigation"
+
+#: admin/partials/slider-form-view.php:162
+msgid "Number of thumbnails:"
+msgstr "Nombre de vignettes :"
+
+#: admin/partials/slider-form-view.php:171
+msgid "Number of visible thumbnails"
+msgstr "Nombre de miniatures visibles"
+
+#: admin/partials/slider-form-view.php:111
+msgid "Number visible pictures:"
+msgstr "Nombre d'images visibles :"
+
+#: admin/partials/slider-form-view.php:206
+msgid "Randomize"
+msgstr "Aléatoire"
+
+#: admin/partials/slider-form-view.php:207
+msgid "Randomize slide order, on load"
+msgstr "Ordre aléatoire des slides, au chargement"
+
+#: admin/partials/slider-form-view.php:217
+msgid "Save"
+msgstr "Sauvegarder"
+
+#: admin/partials/slider-form-view.php:105
+msgid "Set the speed of animations, in milliseconds"
+msgstr "Réglez la vitesse des animations, en millisecondes"
+
+#: admin/partials/slider-form-view.php:94
+msgid "Set the speed of the slideshow cycling, in milliseconds"
+msgstr "Réglez la vitesse du cycle du slider, en millisecondes"
+
+#: admin/partials/slider-form-view.php:195
+msgid "Setup a slideshow for the slider to animate automatically"
+msgstr "Configurer un diaporama pour que le curseur s'anime automatiquement"
+
+#: admin/partials/sliders-list-view.php:52
+msgid "ShortCode"
+msgstr "ShortCode"
+
+#: admin/partials/slider-form-view.php:11
+msgid "Slider"
+msgstr "Slider"
+
+#: admin/partials/slider-form-view.php:85
+msgid "Slider options:"
+msgstr "Options du Slider :"
+
+#: admin/partials/slider-form-view.php:33
+msgid "Slider picture:"
+msgstr "Image du Slider :"
+
+#: admin/partials/sliders-list-view.php:30
+#, fuzzy
+#| msgid "Slider list"
+msgid "Sliders list"
+msgstr "Liste des sliders"
+
+#: admin/partials/slider-form-view.php:194
+msgid "Slideshow"
+msgstr "Slideshow"
+
+#: admin/partials/slider-form-view.php:89
+msgid "Slideshow speed:"
+msgstr "Vitesse du slideshow :"
+
+#. Description of the plugin
+msgid ""
+"This is a short description of what the plugin does. It's displayed in the "
+"WordPress admin area."
+msgstr ""
+
+#: admin/partials/slider-form-view.php:155
+msgid "Thumbnails"
+msgstr "Miniatures"
+
+#: admin/partials/slider-form-view.php:35
+msgid ""
+"Tip: For best results, make sure all images have the same height and width."
+msgstr ""
+"Astuce : Pour de meilleurs résultats, assurez-vous que toutes les images ont "
+"la même hauteur et la même largeur."
+
+#: admin/partials/slider-form-view.php:21
+#: admin/partials/sliders-list-view.php:51
+msgid "Title"
+msgstr "Titre"
+
+#: admin/partials/slider-form-view.php:131
+msgid "Width of each image of the slider"
+msgstr "Largeur de chaque image du slider"
+
+#: admin/partials/slider-form-view.php:244
+#: admin/partials/sliders-list-view.php:80
+msgid "You are not authorized to perform this operation."
+msgstr "Vous n'êtes pas autorisé à effectuer cette opération."
+
+#: admin/partials/slider-form-view.php:34
+msgid "You can add up to 10 images in your slider."
+msgstr "Vous pouvez ajouter jusqu'à 10 images dans votre slider."

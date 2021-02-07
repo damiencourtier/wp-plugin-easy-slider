@@ -1,0 +1,196 @@
+# Copyright (C) 2021 Damien Courtier
+# This file is distributed under the same license as the Easy Slider plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Easy Slider 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/easy-slider\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-02-07T22:44:01+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: easy-slider\n"
+
+#. Plugin Name of the plugin
+msgid "Easy Slider"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "http://example.com/plugin-name-uri/"
+msgstr ""
+
+#. Description of the plugin
+msgid "This is a short description of what the plugin does. It's displayed in the WordPress admin area."
+msgstr ""
+
+#. Author of the plugin
+msgid "Damien Courtier"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://example.com/"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:11
+msgid "Slider"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:21
+#: admin/partials/sliders-list-view.php:51
+msgid "Title"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:33
+msgid "Slider picture:"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:34
+msgid "You can add up to 10 images in your slider."
+msgstr ""
+
+#: admin/partials/slider-form-view.php:35
+msgid "Tip: For best results, make sure all images have the same height and width."
+msgstr ""
+
+#: admin/partials/slider-form-view.php:44
+msgid "Add a picture"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:60
+#: admin/partials/slider-form-view.php:229
+msgid "Choose a picture"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:72
+#: admin/partials/slider-form-view.php:237
+#: admin/partials/sliders-list-view.php:68
+msgid "Delete"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:85
+msgid "Slider options:"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:89
+msgid "Slideshow speed:"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:94
+msgid "Set the speed of the slideshow cycling, in milliseconds"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:100
+msgid "Animation speed:"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:105
+msgid "Set the speed of animations, in milliseconds"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:111
+msgid "Number visible pictures:"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:120
+msgid "Maximum number of pictures that should be visible"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:126
+msgid "Image width:"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:131
+msgid "Width of each image of the slider"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:138
+msgid "Activatable options:"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:142
+msgid "Navigation"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:143
+msgid "Create navigation for paging control of each slide"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:155
+msgid "Thumbnails"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:156
+msgid "Adds navigation for pagination control of each slide with thumbnail"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:162
+msgid "Number of thumbnails:"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:171
+msgid "Number of visible thumbnails"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:182
+msgid "Navigation arrow"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:183
+msgid "Create previous/next arrow navigation"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:194
+msgid "Slideshow"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:195
+msgid "Setup a slideshow for the slider to animate automatically"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:206
+msgid "Randomize"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:207
+msgid "Randomize slide order, on load"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:216
+msgid "Cancel"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:217
+msgid "Save"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:244
+#: admin/partials/sliders-list-view.php:80
+msgid "You are not authorized to perform this operation."
+msgstr ""
+
+#: admin/partials/sliders-list-view.php:22
+msgid "copied shortcode !"
+msgstr ""
+
+#: admin/partials/sliders-list-view.php:30
+msgid "Sliders list"
+msgstr ""
+
+#: admin/partials/sliders-list-view.php:36
+msgid "Add a Slider"
+msgstr ""
+
+#: admin/partials/sliders-list-view.php:52
+msgid "ShortCode"
+msgstr ""
+
+#: admin/partials/sliders-list-view.php:63
+msgid "Copy"
+msgstr ""
+
+#: admin/partials/sliders-list-view.php:67
+msgid "Edit"
+msgstr ""
