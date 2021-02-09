@@ -15,6 +15,19 @@ if( current_user_can( 'edit_users' ) ) {
             <div class="card">
                 <div class="card-header">
 
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3><?= get_admin_page_title() ?> - <?php esc_html_e('Sliders list','easy-slider') ?></h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="float-end">
+                                <a href="<?= admin_url('admin.php?page='. $this->plugin_name . '-form') ?>" type="button" class="btn btn-outline-info btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                    </svg> <?php esc_html_e('Add a Slider','easy-slider') ?></a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div aria-live="polite" aria-atomic="true" class="bg-dark position-relative bd-example-toasts">
                         <div class="toast-container position-absolute p-3 top-0 end-0" id="toastPlacement">
                             <div class="toast text-white bg-primary">
@@ -25,23 +38,7 @@ if( current_user_can( 'edit_users' ) ) {
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h3><?= get_admin_page_title() ?> - <?php esc_html_e('Sliders list','easy-slider') ?></h3>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="float-end">
-                                <a href="" type="button" class="btn btn-outline-info btn-sm"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                                    </svg> <?php esc_html_e('Add a Slider','easy-slider') ?></a>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
-
-
 
                 <div class="card-body display-alert">
 
