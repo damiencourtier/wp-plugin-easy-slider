@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-02-07T22:44:01+01:00\n"
+"POT-Creation-Date: 2021-02-08T19:29:58+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: easy-slider\n"
@@ -18,20 +18,12 @@ msgstr ""
 msgid "Easy Slider"
 msgstr ""
 
-#. Plugin URI of the plugin
-msgid "http://example.com/plugin-name-uri/"
-msgstr ""
-
 #. Description of the plugin
-msgid "This is a short description of what the plugin does. It's displayed in the WordPress admin area."
+msgid "Easy Slider makes it easy to add sliders to any page through shortcodes."
 msgstr ""
 
 #. Author of the plugin
 msgid "Damien Courtier"
-msgstr ""
-
-#. Author URI of the plugin
-msgid "http://example.com/"
 msgstr ""
 
 #: admin/partials/slider-form-view.php:11

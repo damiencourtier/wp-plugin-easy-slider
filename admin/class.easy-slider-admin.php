@@ -240,7 +240,7 @@ class Easy_Slider_Admin{
      */
     public function slider_form_response()
     {
-        if (isset($_POST['slider_nonce']) && wp_verify_nonce($_POST['slider_nonce'], 'slider_nonce')) {
+        if (isset($_POST['slider_nonce']) && wp_verify_nonce($_POST['slider_nonce'], 'easy_slider_form_nonce')) {
 
             global $wpdb;
             $new = true;
