@@ -19,6 +19,7 @@ class Easy_Slider_Flexslider{
                     animation: 'slide',
                     smoothHeight: true,
                     animationLoop: true,
+                    pauseOnAction:false,
                     animationSpeed: " . ( $params->animationSpeed ? $params->animationSpeed : 600 ) . ",
                     slideshowSpeed: " . ( $params->animationSpeed ? $params->slideshowSpeed : 7000) . ",
                     slideshow: " . ($params->slideshow?'true':'false') . ",
@@ -61,6 +62,7 @@ class Easy_Slider_Flexslider{
                     animationLoop: true,
                     controlNav: false,
                     slideshow: false,
+                    pauseOnAction:false,
                     itemWidth: 150,
                     itemMargin: 0,
                     maxItems: $params->maxItemsThumbnail,
@@ -76,9 +78,7 @@ class Easy_Slider_Flexslider{
                     animationSpeed: " . ($params->animationSpeed?$params->animationSpeed:600) . ",
                     slideshowSpeed: " . ($params->slideshowSpeed?$params->slideshowSpeed:7000) . ",
                     slideshow: " . ($params->slideshow?'true':'false') . ",
-                    randomize: " . ($params->randomize?'true':'false') . ",
                     directionNav: " . ($params->directionNav?'true':'false') . ",
-                    
                     sync: '#carousel-".$slug."'
                 });
             });

@@ -253,21 +253,20 @@ class Easy_Slider_Admin{
             $params['animationSpeed']       = ( empty( $_POST[$this->plugin_name]['animationSpeed'] ) ? '' : absint( $_POST[$this->plugin_name]['animationSpeed'] ) );
             $params['directionNav']         = ( isset( $_POST[$this->plugin_name]['directionNav'] ) ? 1 : 0 );
             $params['slideshow']            = ( isset( $_POST[$this->plugin_name]['slideshow'] ) ? 1 : 0 );
-            $params['randomize']            = ( isset( $_POST[$this->plugin_name]['randomize'] ) ? 1 : 0 );
             $params['controlNavThumbnail']  = ( isset( $_POST[$this->plugin_name]['controlNavThumbnail'] ) ? 1 : 0 );
 
             if($params['controlNavThumbnail']){
-
                 $params['controlNav']           = 0;
                 $params['maxItems']             = 1;
                 $params['itemWidth']            = '';
                 $params['maxItemsThumbnail']    = absint( ( $_POST[$this->plugin_name]['maxItemsThumbnail'] <= 10 ? $_POST[$this->plugin_name]['maxItemsThumbnail'] : 10 ) );
-
+                $params['randomize']            = 0;
             }else{
                 $params['controlNav']           = ( isset( $_POST[$this->plugin_name]['controlNav'] ) ? 1 : 0 );
                 $params['maxItems']             = absint( ( $_POST[$this->plugin_name]['maxItems'] <= 10 ? $_POST[$this->plugin_name]['maxItems'] : 10 ) );
                 $params['itemWidth']            = ( empty( $_POST[$this->plugin_name]['itemWidth'] ) ? '' : absint( $_POST[$this->plugin_name]['itemWidth'] ) );
                 $params['maxItemsThumbnail']    = 1;
+                $params['randomize']            = ( isset( $_POST[$this->plugin_name]['randomize'] ) ? 1 : 0 );
             }
 
             // Update

@@ -8,7 +8,17 @@ if( current_user_can( 'edit_users' ) ) {
     <div class="wrap easy-slider">
 
         <div class="card">
-            <h3 class="card-header"><?= get_admin_page_title() ?> - <?php esc_html_e('Slider','easy-slider') ?></h3>
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-sm-7">
+                        <h3><?= get_admin_page_title() ?> - <?php esc_html_e('Slider','easy-slider') ?></h3>
+                    </div>
+                    <div class="col-sm-5">
+                        <a href="<?= admin_url('admin.php?page='. $this->plugin_name ) ?>" type="button" class="btn btn-sm btn-secondary float-end"><?php esc_html_e('Back to the list','easy-slider') ?></a>
+                    </div>
+                </div>
+            </div>
+
             <div class="card-body display-alert card-body-background">
                 <form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post" id="slider_form_ajax" >
 
@@ -202,7 +212,7 @@ if( current_user_can( 'edit_users' ) ) {
                                 <div class="col-sm-3"></div>
                                 <div class="col-sm-5">
                                     <div class="form-check form-switch">
-                                        <input class="form-check-input" type="checkbox" id="<?= $this->plugin_name ?>-randomize" name="<?= $this->plugin_name ?>[randomize]" <?= (!$this->new && $this->params->randomize?'checked':'') ?>>
+                                        <input class="form-check-input randomize" type="checkbox" id="<?= $this->plugin_name ?>-randomize" name="<?= $this->plugin_name ?>[randomize]" <?= (!$this->new && $this->params->randomize?'checked':'') ?> <?= (!$this->new && $this->params->controlNavThumbnail?'disabled':'') ?>>
                                         <label class="form-check-label" for="<?= $this->plugin_name ?>-randomize"><?php esc_html_e('Randomize','easy-slider') ?></label>
                                         <button type="button" class="btn btn-link popover-dismiss" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="<?php esc_html_e('Randomize slide order, on load','easy-slider') ?>">
                                             <span class="dashicons dashicons-editor-help "></span>

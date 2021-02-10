@@ -55,13 +55,14 @@ jQuery( document ).ready( function( $ ) {
 			$('.maxItems').attr('disabled',true);
 			$('.content-itemWidth').slideUp();
 
+			$('.randomize').attr('disabled',true);
 			$('.control-nav').attr('disabled',true);
 		}else{
-			$('.maxItemsThumbnail').val(1);
 			$('.maxItemsThumbnail').attr('disabled',true);
 
 			$('.maxItems').attr('disabled',false);
 
+			$('.randomize').attr('disabled',false);
 			$('.control-nav').attr('disabled',false);
 		}
 	});

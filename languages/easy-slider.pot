@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-02-08T19:29:58+01:00\n"
+"POT-Creation-Date: 2021-02-10T20:02:56+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: easy-slider\n"
@@ -26,163 +26,167 @@ msgstr ""
 msgid "Damien Courtier"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:11
+#: admin/partials/slider-form-view.php:14
 msgid "Slider"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:21
-#: admin/partials/sliders-list-view.php:51
+#: admin/partials/slider-form-view.php:17
+msgid "Back to the list"
+msgstr ""
+
+#: admin/partials/slider-form-view.php:31
+#: admin/partials/sliders-list-view.php:48
 msgid "Title"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:33
+#: admin/partials/slider-form-view.php:43
 msgid "Slider picture:"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:34
+#: admin/partials/slider-form-view.php:44
 msgid "You can add up to 10 images in your slider."
 msgstr ""
 
-#: admin/partials/slider-form-view.php:35
+#: admin/partials/slider-form-view.php:45
 msgid "Tip: For best results, make sure all images have the same height and width."
 msgstr ""
 
-#: admin/partials/slider-form-view.php:44
+#: admin/partials/slider-form-view.php:54
 msgid "Add a picture"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:60
-#: admin/partials/slider-form-view.php:229
+#: admin/partials/slider-form-view.php:70
+#: admin/partials/slider-form-view.php:239
 msgid "Choose a picture"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:72
-#: admin/partials/slider-form-view.php:237
-#: admin/partials/sliders-list-view.php:68
+#: admin/partials/slider-form-view.php:82
+#: admin/partials/slider-form-view.php:247
+#: admin/partials/sliders-list-view.php:65
 msgid "Delete"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:85
+#: admin/partials/slider-form-view.php:95
 msgid "Slider options:"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:89
+#: admin/partials/slider-form-view.php:99
 msgid "Slideshow speed:"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:94
+#: admin/partials/slider-form-view.php:104
 msgid "Set the speed of the slideshow cycling, in milliseconds"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:100
+#: admin/partials/slider-form-view.php:110
 msgid "Animation speed:"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:105
+#: admin/partials/slider-form-view.php:115
 msgid "Set the speed of animations, in milliseconds"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:111
+#: admin/partials/slider-form-view.php:121
 msgid "Number visible pictures:"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:120
+#: admin/partials/slider-form-view.php:130
 msgid "Maximum number of pictures that should be visible"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:126
+#: admin/partials/slider-form-view.php:136
 msgid "Image width:"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:131
+#: admin/partials/slider-form-view.php:141
 msgid "Width of each image of the slider"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:138
+#: admin/partials/slider-form-view.php:148
 msgid "Activatable options:"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:142
+#: admin/partials/slider-form-view.php:152
 msgid "Navigation"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:143
+#: admin/partials/slider-form-view.php:153
 msgid "Create navigation for paging control of each slide"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:155
+#: admin/partials/slider-form-view.php:165
 msgid "Thumbnails"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:156
+#: admin/partials/slider-form-view.php:166
 msgid "Adds navigation for pagination control of each slide with thumbnail"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:162
+#: admin/partials/slider-form-view.php:172
 msgid "Number of thumbnails:"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:171
+#: admin/partials/slider-form-view.php:181
 msgid "Number of visible thumbnails"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:182
+#: admin/partials/slider-form-view.php:192
 msgid "Navigation arrow"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:183
+#: admin/partials/slider-form-view.php:193
 msgid "Create previous/next arrow navigation"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:194
+#: admin/partials/slider-form-view.php:204
 msgid "Slideshow"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:195
+#: admin/partials/slider-form-view.php:205
 msgid "Setup a slideshow for the slider to animate automatically"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:206
+#: admin/partials/slider-form-view.php:216
 msgid "Randomize"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:207
+#: admin/partials/slider-form-view.php:217
 msgid "Randomize slide order, on load"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:216
+#: admin/partials/slider-form-view.php:226
 msgid "Cancel"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:217
+#: admin/partials/slider-form-view.php:227
 msgid "Save"
 msgstr ""
 
-#: admin/partials/slider-form-view.php:244
-#: admin/partials/sliders-list-view.php:80
+#: admin/partials/slider-form-view.php:254
+#: admin/partials/sliders-list-view.php:77
 msgid "You are not authorized to perform this operation."
 msgstr ""
 
-#: admin/partials/sliders-list-view.php:22
-msgid "copied shortcode !"
-msgstr ""
-
-#: admin/partials/sliders-list-view.php:30
+#: admin/partials/sliders-list-view.php:20
 msgid "Sliders list"
 msgstr ""
 
-#: admin/partials/sliders-list-view.php:36
+#: admin/partials/sliders-list-view.php:26
 msgid "Add a Slider"
 msgstr ""
 
-#: admin/partials/sliders-list-view.php:52
+#: admin/partials/sliders-list-view.php:35
+msgid "copied shortcode !"
+msgstr ""
+
+#: admin/partials/sliders-list-view.php:49
 msgid "ShortCode"
 msgstr ""
 
-#: admin/partials/sliders-list-view.php:63
+#: admin/partials/sliders-list-view.php:60
 msgid "Copy"
 msgstr ""
 
-#: admin/partials/sliders-list-view.php:67
+#: admin/partials/sliders-list-view.php:64
 msgid "Edit"
 msgstr ""
