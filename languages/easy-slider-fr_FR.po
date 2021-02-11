@@ -5,12 +5,12 @@ msgstr ""
 "Project-Id-Version: Easy Slider 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/easy-slider\n"
 "Last-Translator: \n"
-"Language-Team: Français\n"
+"Language-Team: French (France)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-02-07T22:02:21+01:00\n"
-"PO-Revision-Date: 2021-02-10 19:03+0000\n"
+"PO-Revision-Date: 2021-02-11 17:14+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: easy-slider\n"
 "Language: fr_FR\n"
@@ -20,6 +20,10 @@ msgstr ""
 #: admin/partials/slider-form-view.php:148
 msgid "Activatable options:"
 msgstr "Options activables :"
+
+#: admin/class.easy-slider-admin.php:154
+msgid "Add"
+msgstr "Ajouter"
 
 #: admin/partials/slider-form-view.php:54
 msgid "Add a picture"
@@ -79,6 +83,8 @@ msgid "Delete"
 msgstr "Supprimer"
 
 #. Plugin Name of the plugin
+#: admin/class.easy-slider-admin.php:132 admin/class.easy-slider-admin.php:133
+#: admin/class.easy-slider-admin.php:143 admin/class.easy-slider-admin.php:153
 msgid "Easy Slider"
 msgstr "Easy Slider"
 
@@ -161,6 +167,7 @@ msgstr "Options du Slider :"
 msgid "Slider picture:"
 msgstr "Image du Slider :"
 
+#: admin/class.easy-slider-admin.php:144
 #: admin/partials/sliders-list-view.php:20
 #| msgid "Slider list"
 msgid "Sliders list"

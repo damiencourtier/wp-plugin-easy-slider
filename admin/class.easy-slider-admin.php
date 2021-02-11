@@ -129,8 +129,8 @@ class Easy_Slider_Admin{
      * @since    1.0.0
      */
     public function add_plugin_admin_menu() {
-        add_menu_page(	__( 'Easy Slider', $this->plugin_text_domain ), //page title
-            __( 'Easy Slider', $this->plugin_text_domain ), //menu title
+        add_menu_page(	esc_html__( 'Easy Slider', 'easy-slider' ), //page title
+            esc_html__( 'Easy Slider', 'easy-slider' ), //menu title
             'manage_options', //capability
             $this->plugin_name, //menu_slug
             '',
@@ -140,8 +140,8 @@ class Easy_Slider_Admin{
         // Add a submenu page and save the returned hook suffix.
         $html_form_page_hook = add_submenu_page(
             $this->plugin_name, //parent slug
-            __( 'Easy Slider', $this->plugin_text_domain ), //page title
-            __( 'Tous les sliders', $this->plugin_text_domain ), //menu title
+            esc_html__( 'Easy Slider', 'easy-slider' ), //page title
+            esc_html__( 'Sliders list', 'easy-slider' ), //menu title
             'manage_options', //capability
             $this->plugin_name, //menu_slug
             array( $this, 'slider_list_page_content' ) //callback for page content
@@ -150,8 +150,8 @@ class Easy_Slider_Admin{
         // Add a submenu page and save the returned hook suffix.
         $slider_form_page_hook = add_submenu_page(
             $this->plugin_name, //parent slug
-            __( 'Easy Slider', $this->plugin_text_domain ), //page title
-            __( 'Ajouter', $this->plugin_text_domain ), //menu title
+            esc_html__( 'Easy Slider', 'easy-slider' ), //page title
+            esc_html__( 'Add', 'easy-slider' ), //menu title
             'manage_options', //capability
             $this->plugin_name . '-form', //menu_slug
             array( $this, 'slider_form_page_content' ) //callback for page content
