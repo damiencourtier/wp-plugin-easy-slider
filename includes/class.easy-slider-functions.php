@@ -1,9 +1,17 @@
 <?php
 
+/**
+ * Class Easy_Slider_Functions
+ *
+ * @since      1.0.0
+ * @author     Damien Courtier
+ */
 class Easy_Slider_Functions{
 
     /**
-     * Permet d'avoir la liste des sliders
+     * Allows to have the sliders list
+     *
+     * @since 1.0.0
      * @return array|object|null
      */
     public static function getSlidersList(){
@@ -12,9 +20,11 @@ class Easy_Slider_Functions{
     }
 
     /**
-     * Permet de récupérer un slider (sans les items)
+     * Allows to return a slider (without the slides)
      * @param $slug
      * @param $key
+     *
+     * @since 1.0.0
      * @return array|object|void|null
      */
     public static function getOneSlider($slug,$key){
@@ -23,8 +33,10 @@ class Easy_Slider_Functions{
     }
 
     /**
-     * Permet de récupérer les items d'un slider
+     * Allows to return the items of a slider
      * @param $slider_id
+     *
+     * @since 1.0.0
      * @return array|object
      */
     public static function getItemsSlider($slider_id){
@@ -34,8 +46,10 @@ class Easy_Slider_Functions{
     }
 
     /**
-     * Permet de récupérer les items d'un slider avec le slug
+     * Allows to return the items of a slider with the slug
      * @param $slider_id
+     *
+     * @since 1.0.0
      * @return array|object
      */
     public static function getItemsSliderBySlug($slug){
@@ -45,7 +59,9 @@ class Easy_Slider_Functions{
     }
 
     /**
-     * Permet de récupérer tous les sliders
+     * Allows to return all sliders
+     *
+     * @since 1.0.0
      * @return array|object
      */
     public static function getAllSliders(){
@@ -54,14 +70,14 @@ class Easy_Slider_Functions{
         return ($result === NUlL?[]:$result);
     }
 
-    //public static function getFullSLiderBySlug
-
     /**
-     * Permet de générer un slug unique pour un slider
+     * Allows to generate a unique slug for a slider
      * @param $slug
      * @param bool $new
      * @param null $slider_id
      * @param int $index
+     *
+     * @since 1.0.0
      * @return string
      */
     public static function generateSlug($slug , $new = true, $slider_id = null,$index = 0){

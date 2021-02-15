@@ -19,7 +19,7 @@
  *
  * @package    Easy_Slider
  * @subpackage Easy_Slider/includes
- * @author     Damien Courtier <email@example.com>
+ * @author     Damien Courtier
  */
 class Easy_Slider_Loader {
 

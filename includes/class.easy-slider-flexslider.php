@@ -1,6 +1,21 @@
 <?php
+
+/**
+ * Class Easy_Slider_Flexslider
+ *
+ * @since      1.0.0
+ * @author     Damien Courtier
+ */
 class Easy_Slider_Flexslider{
 
+    /**
+     * Display of a basic slider in a shortcode
+     * @param $slug
+     * @param $items
+     * @param $params
+     * @since 1.0.0
+     * @return string
+     */
     public static function basicSlider($slug, $items, $params){
 
         $content = '<div class="'.$slug.' flexslider carousel"><ul class="slides">';
@@ -35,6 +50,14 @@ class Easy_Slider_Flexslider{
         return $content;
     }
 
+    /**
+     * Display of a Thumbnail slider in a shortcode
+     * @param $slug
+     * @param $items
+     * @param $params
+     * @since 1.0.0
+     * @return string
+     */
     public static function sliderWithThumbnail($slug, $items, $params){
 
         $content = '<div id="slider-'.$slug.'" class="flexslider"><ul class="slides">';

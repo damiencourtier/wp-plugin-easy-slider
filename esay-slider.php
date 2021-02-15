@@ -8,7 +8,6 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              http://example.com
  * @since             1.0.0
  * @package           Easy_Slider
  *
@@ -27,7 +26,6 @@
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
-
 
 define( 'PLUGIN_NAME', 'easy-slider' );
 define( 'PLUGIN_VERSION', '1.0.0' );

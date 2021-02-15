@@ -18,7 +18,8 @@
  *
  * @package    Easy_Slider
  * @subpackage Easy_Slider/admin
- * @author     Damien Courtier <email@example.com>
+ * @since    1.0.0
+ * @author     Damien Courtier
  */
 class Easy_Slider_Admin{
 
@@ -70,24 +71,11 @@ class Easy_Slider_Admin{
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Plugin_Name_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
         // Style only for plugin page
         if ( strpos(get_current_screen()->base, 'easy-slider') !== false) {
            wp_enqueue_style('bootstrap-min', plugin_dir_url(__FILE__) . 'css/bootstrap.min.css', array(), $this->version, 'all');
            wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/easy-slider-admin.css', array(), $this->version, 'all' );
         }
-
 
 	}
 
@@ -97,18 +85,6 @@ class Easy_Slider_Admin{
 	 * @since    1.0.0
 	 */
 	public function enqueue_scripts() {
-
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Plugin_Name_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
 
         if ( ! did_action( 'wp_enqueue_media' ) ) {
             wp_enqueue_media();
@@ -206,7 +182,8 @@ class Easy_Slider_Admin{
     }
 
     /**
-     * Permet de supprimer un slider en ajax
+     * Allows to doing a ajax delete slide
+     *
      * @since	1.0.0
      */
     public function delete_slider(){
@@ -220,7 +197,7 @@ class Easy_Slider_Admin{
             $wpdb->delete($wpdb->prefix . 'es_sliders', array('id_slider' => $slider_id));
             $wpdb->delete($wpdb->prefix . 'es_sliders_items', array('id_slider' => $slider_id));
 
-            $response = '<div class="alert alert-success" role="alert" style="display: none;">Le slider a bien été supprimé !</div>';
+            $response = '<div class="alert alert-success" role="alert" style="display: none;">'.esc_html__('The slider has been deleted!').'</div>';
 
             header('Content-Type: application/json');
             echo json_encode(array('response' => $response));
@@ -235,7 +212,8 @@ class Easy_Slider_Admin{
     }
 
     /**
-     * Permet de créer ou de mettre à jour un slider
+     * Allows to create or update a slider
+     *
      * @since    1.0.0
      */
     public function slider_form_response()
@@ -288,7 +266,7 @@ class Easy_Slider_Admin{
                 $wpdb->delete($wpdb->prefix . 'es_sliders_items',array('id_slider' => $_POST['slider_id']));
 
                 $slider_id   = $_POST['slider_id'];
-                $message    = 'Le slider a bien été modifié !';
+                $message    = esc_html__('The slider has been edited!');
             }
             // Create
             else{
@@ -306,7 +284,7 @@ class Easy_Slider_Admin{
                 $wpdb->insert($wpdb->prefix.'es_sliders',$data);
 
                 $slider_id   = $wpdb->insert_id;
-                $message    = 'Le slider a bien été créé !';
+                $message    = esc_html__('The slider has been created!');
             }
 
             // Slider Item
@@ -321,14 +299,14 @@ class Easy_Slider_Admin{
                     );
                     $wpdb->insert($wpdb->prefix . 'es_sliders_items', $data);
 
-                    if($i == 10) { // Limit à 10 slides
+                    if($i == 10) { // Limit to 10 slides
                         break;
                     }
                     $i++;
                 }
             }
 
-            // Confirmation message
+            // Message confirmation
             $response = '<div class="alert alert-success" role="alert" style="display: none;">'.$message.'</div>';
 
             header('Content-Type: application/json');
@@ -343,7 +321,7 @@ class Easy_Slider_Admin{
         }
     }
 
-    /*
+    /**
      * Callback for the load-($sliders_list_page_hook)
      * Called when the plugin's submenu HTML form page is loaded
      *
@@ -353,7 +331,7 @@ class Easy_Slider_Admin{
         // called when the particular page is loaded.
     }
 
-    /*
+    /**
      * Callback for the load-($slider_form_page_hook)
      * Called when the plugin's submenu HTML form page is loaded
      *

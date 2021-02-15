@@ -16,9 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
+ *
  * @package    Easy_Slider
  * @subpackage Easy_Slider/public
- * @author     Damien Courtier <email@example.com>
+ * @since    1.0.0
+ * @author     Damien Courtier
  */
 class Easy_Slider_Public {
 
@@ -61,20 +63,9 @@ class Easy_Slider_Public {
 	 */
 	public function enqueue_styles() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Easy_Slider_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Plugin_Name_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
         wp_enqueue_style( 'flexslider', plugin_dir_url( __FILE__ ) . 'css/flexslider.css', array(), $this->version, 'all' );
         wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/easy-slider-public.css', array(), $this->version, 'all' );
+
 	}
 
 	/**
@@ -84,25 +75,16 @@ class Easy_Slider_Public {
 	 */
 	public function enqueue_scripts() {
 
-		/**
-		 * This function is provided for demonstration purposes only.
-		 *
-		 * An instance of this class should be passed to the run() function
-		 * defined in Plugin_Name_Loader as all of the hooks are defined
-		 * in that particular class.
-		 *
-		 * The Plugin_Name_Loader will then create the relationship
-		 * between the defined hooks and the functions defined in this
-		 * class.
-		 */
-
         wp_enqueue_script( 'jquery-flexslider-min', plugin_dir_url( __FILE__ ) . 'js/jquery.flexslider-min.js', array( 'jquery' ), $this->version, true );
         wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/easy-slider-public.js', array( 'jquery' ), $this->version, true );
 
 	}
 
     /**
-     * Contenu du shortcode
+     * Shortcode content
+     * @param $atts
+     *
+     * @since 1.0.0
      * @return string
      */
     public function shortcode_content($atts){

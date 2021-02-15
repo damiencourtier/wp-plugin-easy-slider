@@ -18,19 +18,19 @@
  * @since      1.0.0
  * @package    Easy_Slider
  * @subpackage Easy_Slider/includes
- * @author     Damien Courtier <email@example.com>
+ * @author     Damien Courtier
  */
 class Easy_Slyder_Uninstall {
 
     /**
-     * Short Description. (use period)
-     *
-     * Long Description.
+     * Uninstall function delete two tables in db
      *
      * @since    1.0.0
      */
     public static function uninstall() {
-
+        global $wpdb;
+        $wpdb->query( 'DROP TABLE IF EXISTS ' . $wpdb->prefix . 'es_sliders_items' );
+        $wpdb->query( 'DROP TABLE IF EXISTS ' . $wpdb->prefix . 'es_sliders' );
     }
 
 }

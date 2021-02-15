@@ -6,11 +6,11 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Plugin_Name
- * @subpackage Plugin_Name/includes
+ * @package    Easy_Slider
+ * @subpackage Easy_Slider/includes
+ * @author     Damien Courtier
  */
 
 /**
@@ -68,10 +68,6 @@ class Easy_Slider {
 
 	/**
 	 * Define the core functionality of the plugin.
-	 *
-	 * Set the plugin name and the plugin version that can be used throughout the plugin.
-	 * Load the dependencies, define the locale, and set the hooks for the admin area and
-	 * the public-facing side of the site.
 	 *
 	 * @since    1.0.0
 	 */

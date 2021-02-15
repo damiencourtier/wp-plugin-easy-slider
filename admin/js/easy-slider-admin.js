@@ -67,9 +67,6 @@ jQuery( document ).ready( function( $ ) {
 		}
 	});
 
-
-
-
 	handleAddSlideButtons();
 	handleDeleteButtons();
 
@@ -142,8 +139,6 @@ jQuery(function($){
 			}).open();
 
 	});
-
-
 
 });
 
